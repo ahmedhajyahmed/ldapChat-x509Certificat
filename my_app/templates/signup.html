@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% block container %}
+  <div class="top-pad">
+    <form
+        method="POST"
+        action="{{ url_for('auth.signup') }}"
+        role="form">
+      {{ form.csrf_token }}
+      <div class="form-group">{{ form.cn.label }}: {{ form.cn() }}</div>
+      <div class="form-group">{{ form.givenName.label }}: {{ form.givenName() }}</div>
+      <div class="form-group">{{ form.telephoneNumber.label }}: {{ form.telephoneNumber() }}</div>
+      <div class="form-group">{{ form.sn.label }}: {{ form.sn() }}</div>
+      <div class="form-group">{{ form.departmentNumber.label }}: {{ form.departmentNumber() }}</div>
+      <div class="form-group">{{ form.userPassword.label }}: {{ form.userPassword() }}</div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+{% endblock %}
