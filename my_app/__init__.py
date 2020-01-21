@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/LdapChat'
 app.config['WTF_CSRF_SECRET_KEY'] = 'random key for form'
-app.config['LDAP_PROVIDER_URL'] = 'ldap://192.168.1.55:389/'
+app.config['LDAP_PROVIDER_URL'] = 'ldap://192.168.43.54:389/'
 app.config['LDAP_PROTOCOL_VERSION'] = 3
 db = SQLAlchemy(app)
 

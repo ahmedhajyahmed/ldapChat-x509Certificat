@@ -9,7 +9,7 @@ from flask_login._compat import unicode
 
 def get_ldap_connection():
     # conn = ldap.initialize(app.config['LDAP_PROVIDER_URL'])
-    server = Server('192.168.1.55', get_info=ALL)
+    server = Server('192.168.43.54', get_info=ALL)
     conn = Connection(server, 'cn=admin,dc=chatroom,dc=com', 'root', auto_bind=True)
     return conn
 
